@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>To Do List</title>
+</head>
+
+<body>
+    <template id="to-do-item-template">
+        <li class="to-do-item">
+            <div class="details">
+                <button class="select">
+                    <i class="icon-android-checkbox-outline-blank"></i>
+                </button>
+                <div class="date"></div>
+                <div class="title"></div>
+            </div>
+            <div class="actions">
+                <span class="show-complete">Complete!</span>
+                <button class="mark-complete">
+                    <i class="icon-android-done"></i>
+                </button>
+                <button label="Delete Item" title="Delete Item" class="delete">
+                    <i class="icon-android-close"></i>
+                </button>
+            </div>
+        </li>
+    </template>
+    <header>
+        <h1>TODO List</h1>
+    </header>
+    <main class="app">
+        <form id="add-item-form" class="add-item">
+            <input type="text" id="new-to-do-input" placeholder="Enter new to do task" autocomplete="off"></input>
+            <button type="submit" label="Add new to do item" id="add-to-do" title="Add Item">
+                <i class="icon-android-add"></i>
+            </button>
+        </form>
+        <section id="list-container">
+            <div class="controls">
+                <div class="sort">
+                    <button id="toggle-sort" class="icon-with-level">
+                        <i class="icon-android-arrow-down"></i>
+                        <span>Newest</span>
+                    </button>
+                    <div class="count-container"><span id="item-count">0</span> tasks</div>
+                </div>
+                <div class="actions">
+                    <button id="undo" hidden>
+                        <i class="icon-ios-undo"></i>
+                        <span>Undo</span>
+                    </button>
+                    <button id="mark-complete-selected" class="activate-on-select" hidden>
+                        <i class="icon-android-done-all"></i>
+                        <span>Mark Complete</span>
+                    </button>
+                    <button id="delete-selected" class="activate-on-select" hidden>
+                        <i class="icon-android-close"></i>
+                        <span>Delete</span>
+                    </button>
+                    <button id="clear-list" class="icon-with-level">
+                        <i class="icon-android-delete"></i>
+                        <span>Clear All</span>
+                    </button>
+                </div>
+            </div>
+            <ul id="to-do-list"></ul>
+        </section>
+        <div id="no-item-message" hidden>No TODO tasks! You can add one above.</div>
+    </main>
+    <script src="./bundle.js"></script>
+</body>
+
+</html>

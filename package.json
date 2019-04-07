@@ -1,0 +1,31 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "A simple to do list using Typescript + webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "author": "Jayabratha Saha",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.8",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "karma": "^4.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-webpack": "^3.0.5",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
+}

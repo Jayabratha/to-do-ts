@@ -1,0 +1,63 @@
+li.to-do-item {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    height: 80px;
+    padding: 0 10px;
+    font-family: Arial;
+    font-size: 15px;
+    background: #FFFFFF;
+    border-bottom: thin solid #e3e3e3;
+    .details {
+        max-width: 80%;
+        input {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            border: thin solid #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .date {
+            display: inline-block;
+            vertical-align: middle;
+            color: #8a8a8a;
+        }
+        .title {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 20px;
+            padding: 0 10px;
+            max-width: 65%;
+        }
+    }
+    .show-complete {
+        color: green;
+        display: none;
+    }
+    button.delete {
+        background: transparent;
+        border: none;
+        font-family: serif;
+        width: 50px;
+        outline: none;
+        cursor: pointer;
+        div {
+            font-size: 40px;
+            transform: rotate(45deg);
+        }
+    }
+}
+li.to-do-item.complete {
+    .title {
+        text-decoration: line-through;
+    }
+    .show-complete {
+        display: inline-block;
+    }
+    button.mark-complete {
+        display: none;
+    }
+}

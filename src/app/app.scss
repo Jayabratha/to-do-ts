@@ -1,0 +1,110 @@
+@import "./to-do-item/to-do-item.styles.scss";
+body {
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+    button {
+        background: transparent;
+        padding: 5px 10px;
+        font-size: 15px;
+        border: thin solid transparent;
+        color: #404040;
+        cursor: pointer;
+        vertical-align: middle;
+        * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        i {
+            position: relative;
+            top: 0.2em;
+            font-size: 1.3em;
+        }
+    }
+    button:hover {
+        background: #FFFFFF;
+        border: thin solid #ccc;
+    }
+    header {
+        height: 200px;
+        background: linear-gradient(140deg, #0763b9, #16c1c1, #05ce34);
+        h1 {
+            padding: 100px 0 0;
+            margin: 0;
+            color: #FFFFFF;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+    }
+    main {
+        position: relative;
+        margin: auto;
+        width: 80%;
+        max-width: 800px;
+        .add-item {
+            position: relative;
+            background: #FFFFFF;
+            height: 50px;
+            margin-top: -25px;
+            box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+            input {
+                width: 100%;
+                height: 100%;
+                font-size: 15px;
+                border: none;
+                padding: 0 55px 0 15px;
+                box-sizing: border-box;
+            }
+            input.error {
+                border: thin solid #bf1717;
+                background: #fddcdc;
+            }
+            button {
+                font-size: 25px;
+                padding: 0;
+                background: transparent;
+                border: none;
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                font-family: serif;
+                width: 50px;
+                cursor: pointer;
+            }
+        }
+        #list-container {
+            position: relative;
+            margin: 15px 0;
+            box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+            .controls {
+                position: relative;
+                display: flex;
+                padding: 0 10px;
+                align-items: center;
+                justify-content: space-between;
+                height: 50px;
+                border-bottom: thin solid #e3e3e3;
+                .count-container {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-family: Arial;
+                    font-size: 15px;
+                }
+            }
+            #to-do-list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+        }
+        #no-item-message {
+            text-align: center;
+            padding: 50px 0;
+            font-size: 20px;
+            color: #8a8a8a;
+        }
+    }
+}
